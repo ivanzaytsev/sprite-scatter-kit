@@ -1,0 +1,343 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.1">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px 'Apple Color Emoji'; font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;Sprite Scatter Kit&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p1"><span class="s1">*{margin:0;padding:0;box-sizing:border-box}</span></p>
+<p class="p1"><span class="s1">body{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-family:Inter,Segoe UI,Arial,sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#0f1720;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#eef2f7;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height:1.6;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.container{width:min(1100px,92%);margin:auto}</span></p>
+<p class="p1"><span class="s1">header{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>position:sticky;top:0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:rgba(15,23,32,.85);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>backdrop-filter:blur(10px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom:1px solid rgba(255,255,255,.08);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">nav{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>justify-content:space-between;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>align-items:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:18px 0;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.logo{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight:800;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.logo span{color:#65f0b5}</span></p>
+<p class="p1"><span class="s1">.btn{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#22c55e;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#08130c;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:12px 18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius:10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight:700;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-decoration:none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.hero{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:90px 0 70px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.badge{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#163328;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#7ef2bc;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:8px 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius:999px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom:22px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">h1{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:58px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>line-height:1.05;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom:20px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.subtitle{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>max-width:760px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin:auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#b8c7d5;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:20px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.stats{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns:repeat(4,1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap:18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-top:45px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.stat{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#151f2b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:24px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius:16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border:1px solid rgba(255,255,255,.06);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.stat h2{color:#65f0b5;font-size:28px}</span></p>
+<p class="p1"><span class="s1">section{padding:70px 0}</span></p>
+<p class="p1"><span class="s1">.title{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-size:38px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom:12px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.desc{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#9fb0c1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom:40px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.grid{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns:repeat(2,1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap:22px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.card{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#151f2b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius:18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:26px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border:1px solid rgba(255,255,255,.06);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.icon{font-size:34px}</span></p>
+<p class="p1"><span class="s1">.card h3{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin:14px 0 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#7ef2bc;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.card p{color:#b8c7d5}</span></p>
+<p class="p1"><span class="s1">.steps{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>grid-template-columns:repeat(3,1fr);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>gap:20px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.step{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#151f2b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius:18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:24px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">.num{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:42px;height:42px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius:50%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#22c55e;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#08130c;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>display:grid;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>place-items:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>font-weight:800;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>margin-bottom:14px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">table{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-collapse:collapse;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>background:#151f2b;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-radius:18px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>overflow:hidden;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">td{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:18px 22px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-bottom:1px solid rgba(255,255,255,.06);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">td:first-child{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>width:35%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#9fb0c1;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">footer{</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>text-align:center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>padding:50px 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>color:#94a3b8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>border-top:1px solid rgba(255,255,255,.06);</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">@media(max-width:900px){</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>h1{font-size:42px}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>.stats,.grid,.steps{grid-template-columns:1fr}</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;header&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/header&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;main class="container"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section class="hero"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="badge"&gt;Unity Editor Tool&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h1&gt;Procedural 2D Sprite Cluster Generator&lt;/h1&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;p class="subtitle"&gt;</span></p>
+<p class="p1"><span class="s1">Generate forests, bush walls, rock formations, grass patches, foliage and debris</span></p>
+<p class="p1"><span class="s1">from separate sprites. Export everything as a single optimized Unity sprite with</span></p>
+<p class="p1"><span class="s1">one click.</span></p>
+<p class="p1"><span class="s1">&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="stats"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="stat"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2&gt;∞&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Unique Variations&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="stat"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2&gt;1 Click&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;PNG Export&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="stat"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2&gt;100%&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Editor Workflow&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="stat"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h2&gt;2021+&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Unity LTS&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h2 class="title"&gt;What You Can Create&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;p class="desc"&gt;</span></p>
+<p class="p1"><span class="s1">From tiny decorative details to large environment pieces using your own sprite library.</span></p>
+<p class="p1"><span class="s1">&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="grid"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">🌲</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Forests &amp; Foliage&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Create dense forests, vegetation, leaf clusters and natural landscape assets with procedural variation.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">🌿</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Bush Walls &amp; Hedges&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Generate seamless hedges and decorative bush walls with adjustable density and spread.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">🪨</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Rock Formations&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Build rock piles, stone walls and ground decorations from multiple sprite variants.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">🍂</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Ground Clutter&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Scatter grass, flowers, mushrooms, debris, coins and other environmental details.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h2 class="title"&gt;Powerful Procedural Controls&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;p class="desc"&gt;</span></p>
+<p class="p1"><span class="s1">Every sprite variant has its own independent randomization settings.</span></p>
+<p class="p1"><span class="s1">&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="grid"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">⚖️</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Weighted Appearance&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Control how often each sprite appears with live probability percentages.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">🔄</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Rotation &amp; Scale&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Define individual minimum and maximum ranges for every sprite.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">📚</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Sorting Order&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Choose which sprites always render above others for realistic overlapping.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="card"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="icon"&gt;</span><span class="s2">⭕</span><span class="s1">&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Overlap Prevention&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Optionally distribute sprites without intersecting neighboring objects.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h2 class="title"&gt;Simple Workflow&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="steps"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="step"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="num"&gt;1&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Add Sprites&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Select any number of trees, bushes, rocks, flowers or other 2D sprites.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="step"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="num"&gt;2&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Customize&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Adjust weights, density, rotation, scale, canvas size and distribution.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="step"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;div class="num"&gt;3&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Generate&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Export a single baked sprite ready to use in any SpriteRenderer.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h2 class="title"&gt;Technical Details&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;table&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Unity Version&lt;/td&gt;&lt;td&gt;2021.3 LTS or newer&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Render Pipelines&lt;/td&gt;&lt;td&gt;Built-in, URP, HDRP &amp; Custom SRP&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Runtime Components&lt;/td&gt;&lt;td&gt;None (Editor-only)&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Output&lt;/td&gt;&lt;td&gt;PNG automatically imported as Sprite&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;tr&gt;&lt;td&gt;Preset System&lt;/td&gt;&lt;td&gt;ScriptableObject Assets&lt;/td&gt;&lt;/tr&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/table&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/section&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/main&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h3&gt;Sprite Scatter Kit&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Procedural 2D Environment Generator for Unity&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1">&lt;br&gt;</span></p>
+<p class="p1"><span class="s1">&lt;p&gt;Support: https://www.instagram.com/game.development&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/footer&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
